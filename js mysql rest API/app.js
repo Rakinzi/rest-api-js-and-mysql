@@ -1,32 +1,4 @@
-<body onload="button()">
-	
-</body>
-
-<script>
-									
-function checkingSurvey(){
-const text = document.querySelector('#swal2-title').textContent;
-									
-			if (text == "All Done!"){
-			localStorage.setItem('survey', true)
-}
-			else {
-				localStorage.setItem('survey', false)
-			}
-}
-	
-function button(){
-	
-	if(localStorage.getItem('survey') == true ){	
-let myElement = document.querySelector('.srvy--survey-btn');
-myElement.parentNode.removeChild(myElement);
-	}	
-	else {
-		document.querySelector('.srvy--survey-btn').click()
-	}
-	checkingSurvey();
-}
-</script>const express = require('express');
+const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 
